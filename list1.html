@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" type="" href="./scss/index.css">
+    <link rel="stylesheet" href="./fonts/style.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/list1.js"></script>
+    <script src="./js/template.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <a href="./index.html"><i class="head-back icon-circle-left"></i></a>
+
+            <h2>连载动漫</h2>
+        </div>
+    </header>
+    <div class="lainzai">
+        <ul>
+            <script type="text/html" id="lianzi">
+                {{each data}}
+                <li class="clearfix">
+                    <a href="{{$value.url}}">
+                        <img src="{{$value.img}}" alt="">
+                        <div class="context">
+                            <h2 class="con-name">{{$value.name}}</h2>
+                            <p class="con-episode">{{$value.episode}}</p>
+                            <p class="updateTime">{{$value.updateTime}}</p>
+                            <p class="downloadCount">下载{{$value.downloadCount}}次</p>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+</body>
+
+</html>
